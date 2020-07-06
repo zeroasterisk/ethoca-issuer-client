@@ -3,6 +3,7 @@ from cement import App, TestApp, init_defaults
 from cement.core.exc import CaughtSignal
 from .core.exc import EthocaIssuerClientError
 from .controllers.base import Base
+from .controllers.receipts import Receipts
 
 # configuration defaults
 CONFIG = init_defaults('apiclient')
@@ -42,7 +43,9 @@ class EthocaIssuerClient(App):
 
         # register handlers
         handlers = [
-            Base
+            Base,
+            Receipts,
+            # TODO add other clients
         ]
 
 
@@ -51,7 +54,6 @@ class EthocaIssuerClientTest(TestApp,EthocaIssuerClient):
 
     class Meta:
         label = 'apiclient'
-
 
 def main():
     with EthocaIssuerClient() as app:

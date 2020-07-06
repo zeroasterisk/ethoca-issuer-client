@@ -1,0 +1,17 @@
+
+Dumping the config:
+
+  Sections:
+    {% for section in sections %}{{section}}
+    {% endfor %}
+
+  apiclient:
+    Sandbox:
+      host: {{sandbox.host}}
+      keyid: {{sandbox.keyid}}
+      apikey: {{sandbox.apikey}}
+    Prod:
+      host: {{prod.host}}
+      keyid: {{prod.keyid}}
+      apikey: {{prod.apikey}}
+
