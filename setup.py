@@ -1,6 +1,6 @@
 
 from setuptools import setup, find_packages
-from apiclient.core.version import get_version
+from ethocaissuerclient.core.version import get_version
 
 VERSION = get_version()
 
@@ -9,7 +9,7 @@ LONG_DESCRIPTION = f.read()
 f.close()
 
 setup(
-    name='apiclient',
+    name='ethocaissuerclient',
     version=VERSION,
     description='An API client allowing an Issuer to use Ethoca',
     long_description=LONG_DESCRIPTION,
@@ -19,10 +19,10 @@ setup(
     url='https://github.com/zeroasterisk/ethoca-issuer-client',
     license='unlicensed',
     packages=find_packages(exclude=['ez_setup', 'tests*']),
-    package_data={'apiclient': ['templates/*']},
+    package_data={'ethocaissuerclient': ['templates/*']},
     include_package_data=True,
     entry_points="""
         [console_scripts]
-        apiclient = apiclient.main:main
+        ethocaissuerclient = ethocaissuerclient.main:main
     """,
 )

@@ -6,15 +6,15 @@ from .controllers.base import Base
 from .controllers.receipts import Receipts
 
 # configuration defaults
-CONFIG = init_defaults('apiclient')
-CONFIG['apiclient']['foo'] = 'bar'
+CONFIG = init_defaults('ethocaissuerclient')
+CONFIG['ethocaissuerclient']['foo'] = 'bar'
 
 
 class EthocaIssuerClient(App):
     """Ethoca Issuer Client primary application."""
 
     class Meta:
-        label = 'apiclient'
+        label = 'ethocaissuerclient'
 
         # configuration defaults
         config_defaults = CONFIG
@@ -53,7 +53,7 @@ class EthocaIssuerClientTest(TestApp,EthocaIssuerClient):
     """A sub-class of EthocaIssuerClient that is better suited for testing."""
 
     class Meta:
-        label = 'apiclient'
+        label = 'ethocaissuerclient'
 
 def main():
     with EthocaIssuerClient() as app:

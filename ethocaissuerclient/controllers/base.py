@@ -16,9 +16,9 @@ class Base(Controller):
         description = 'An API client allowing an Issuer to use Ethoca'
 
         # text displayed at the bottom of --help output
-        epilog = 'Usage: apiclient command1 --foo bar'
+        epilog = 'Usage: ethocaissuerclient command1 --foo bar'
 
-        # controller level arguments. ex: 'apiclient --version'
+        # controller level arguments. ex: 'ethocaissuerclient --version'
         arguments = [
             ### add a version banner
             ( [ '-v', '--version' ],
@@ -36,7 +36,7 @@ class Base(Controller):
     #  @ex(
     #      help='example sub command1',
     #
-    #      # sub-command level arguments. ex: 'apiclient command1 --foo bar'
+    #      # sub-command level arguments. ex: 'ethocaissuerclient command1 --foo bar'
     #      arguments=[
     #          ### add a sample foo option under subcommand namespace
     #          ( [ '-f', '--foo' ],
@@ -67,9 +67,9 @@ class Base(Controller):
         # https://docs.builtoncement.com/core-foundation/configuration-settings
         data = {
             'sections': self.app.config.get_sections(),
-            'debug': self.app.config.get('apiclient', 'debug'),
-            'sandbox': self.app.config.get('apiclient', 'sandbox'),
-            'prod': self.app.config.get('apiclient', 'prod'),
+            'debug': self.app.config.get('ethocaissuerclient', 'debug'),
+            'sandbox': self.app.config.get('ethocaissuerclient', 'sandbox'),
+            'prod': self.app.config.get('ethocaissuerclient', 'prod'),
         }
 
         self.app.render(data, 'dump_config.jinja2')

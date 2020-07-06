@@ -15,9 +15,9 @@ $ pip install setup.py
 Make a copy of the configuration file and edit to setup your API keys and details.
 
 ```
-$ cp config/apiclient.yml.example ~/.apiclient.yml
+$ cp config/ethocaissuerclient.yml.example ~/.ethocaissuerclient.yml
 
-$ vim config/apiclient.yml
+$ vim config/ethocaissuerclient.yml
 ```
 
 WARNING be sure not to submit the API credentials to any version control system.
@@ -39,9 +39,9 @@ $ source env/bin/activate
 ```
 
 
-### run apiclient cli application
+### run ethocaissuerclient cli application
 
-$ apiclient --help
+$ ethocaissuerclient --help
 
 
 ### run pytest / coverage
@@ -59,5 +59,5 @@ and can be built with the included `make` helper:
 ```
 $ make docker
 
-$ docker run -it apiclient --help
+$ docker run -it ethocaissuerclient --help
 ```

@@ -1,15 +1,15 @@
 
 from pytest import raises
-from apiclient.main import EthocaIssuerClientTest
+from ethocaissuerclient.main import EthocaIssuerClientTest
 
-def test_apiclient():
-    # test apiclient without any subcommands or arguments
+def test_ethocaissuerclient():
+    # test ethocaissuerclient without any subcommands or arguments
     with EthocaIssuerClientTest() as app:
         app.run()
         assert app.exit_code == 0
 
 
-def test_apiclient_debug():
+def test_ethocaissuerclient_debug():
     # test that debug mode is functional
     argv = ['--debug']
     with EthocaIssuerClientTest(argv=argv) as app:

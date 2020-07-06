@@ -1,5 +1,5 @@
 # Helping you not submit credentials
-config/apiclient.yml
+config/ethocaissuerclient.yml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
